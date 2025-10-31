@@ -1,0 +1,145 @@
+<!-- 
+  <div style="text-align: center; font-size: 48px;">
+   Groups
+   <section class="pa-root" aria-labelledby="pa-heading">
+      <h3 id="pa-heading" class="sr-only">Permission assignment</h3>
+
+      <div class="pa-top">
+        <div class="pa-categories" role="group" aria-label="Categories">
+          <div class="pa-cat-header">
+            <strong>Categories</strong>
+            <div class="pa-cat-actions">
+              <button type="button" class="btn-link" (click)="addSelectedCategory()" [disabled]="!focusedCategoryId">Add</button>
+              <button type="button" class="btn-link" (click)="clearAllCategories()" [disabled]="selectedCategoryIds.length===0">Clear All</button>
+            </div>
+          </div>
+
+          <ul class="cat-list" role="listbox" aria-label="Available categories" tabindex="0" (keydown)="onCategoryListKeydown($event)">
+            <li *ngFor="let c of categories" class="cat-item" [attr.data-id]="c.id" tabindex="-1"
+                [class.selected]="isCategorySelected(c.id)"
+                (click)="toggleCategory(c.id)"
+                (keydown.enter)="toggleCategory(c.id)"
+                (keydown.space)="$event.preventDefault(); toggleCategory(c.id)">
+              <div class="cat-title">{{c.title}}</div>
+              <div class="cat-desc">{{c.description}}</div>
+            </li>
+          </ul>
+
+          <div class="pa-selected-groups" aria-live="polite">
+            <strong>Groups selected</strong>
+            <div *ngIf="selectedCategoryIds.length===0" class="empty">No groups selected yet</div>
+            <div *ngIf="selectedCategoryIds.length>0" class="chips">
+              <span *ngFor="let id of selectedCategoryIds" class="chip">{{lookupCategoryTitle(id)}}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pa-backends" role="region" aria-label="Backends">
+          <div class="pa-back-header">
+            <strong>Backends</strong>
+            <div class="pa-back-actions">
+              <button type="button" class="btn-link" (click)="addAllBackends()" [disabled]="availableBackends.length===0">Add</button>
+              <button type="button" class="btn-link" (click)="clearAllBackends()" [disabled]="selectedBackends.length===0">Clear All</button>
+            </div>
+          </div>
+
+          <div class="back-list">
+            <label *ngFor="let b of availableBackends" class="back-item">
+              <input type="checkbox" [value]="b" (change)="onBackendToggle(b, $event.target.checked)" [checked]="selectedBackends.includes(b)" />
+              <span>{{b}}</span>
+            </label>
+          </div>
+
+          <div class="preview-image">
+            <img alt="Placeholder" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='305' height='189'><rect fill='%23eee' width='100%' height='100%'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23777' font-size='18'>305 x 189 Fill</text></svg>">
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="pa-bottom" role="form" aria-label="Assignment targets and permissions">
+        <div class="pa-col">
+          <label class="label">Roles</label>
+          <div class="empty-or-list" [attr.aria-live]="'polite'">
+            <div *ngIf="roles.length===0" class="empty">No Roles selected yet</div>
+            <ul *ngIf="roles.length>0" class="simple-list">
+              <li *ngFor="let r of roles">{{r}}</li>
+            </ul>
+          </div>
+          <select aria-hidden="true" multiple #nativeRoles style="display:none">
+            <option *ngFor="let r of roles" [value]="r" selected>{{r}}</option>
+          </select>
+        </div>
+
+        <div class="pa-col">
+          <label class="label">Groups</label>
+          <div class="empty-or-list" [attr.aria-live]="'polite'">
+            <div *ngIf="selectedGroups.length===0" class="empty">No Groups selected yet</div>
+            <ul *ngIf="selectedGroups.length>0" class="simple-list">
+              <li *ngFor="let g of selectedGroups">{{g}}</li>
+            </ul>
+          </div>
+          <select aria-hidden="true" multiple #nativeGroups style="display:none">
+            <option *ngFor="let g of selectedGroups" [value]="g" selected>{{g}}</option>
+          </select>
+        </div>
+
+        <div class="pa-col">
+          <label class="label">Users</label>
+          <div class="empty-or-list" [attr.aria-live]="'polite'">
+            <div *ngIf="selectedUsers.length===0" class="empty">No Users selected yet</div>
+            <ul *ngIf="selectedUsers.length>0" class="simple-list">
+              <li *ngFor="let u of selectedUsers">{{u}}</li>
+            </ul>
+          </div>
+          <select aria-hidden="true" multiple #nativeUsers style="display:none">
+            <option *ngFor="let u of selectedUsers" [value]="u" selected>{{u}}</option>
+          </select>
+        </div>
+
+        <div class="pa-col">
+          <label class="label">Permissions</label>
+          <div class="empty-or-list" [attr.aria-live]="'polite'">
+            <div *ngIf="selectedPermissions.length===0" class="empty">No Permissions selected yet</div>
+            <ul *ngIf="selectedPermissions.length>0" class="simple-list">
+              <li *ngFor="let p of selectedPermissions">{{p}}</li>
+            </ul>
+          </div>
+          <select aria-hidden="true" multiple #nativePerms style="display:none">
+            <option *ngFor="let p of selectedPermissions" [value]="p" selected>{{p}}</option>
+          </select>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="pa-actions">
+        <button class="btn-primary" (click)="apply()" [disabled]="!canApply()">Apply</button>
+        <button class="btn-secondary" (click)="reset()">Reset</button>
+      </div>
+    </section>
+  `,
+
+  </div>
+
+ -->
+
+ <div class="grid-row">
+  <div class="grid-col">Column 1</div>
+  <div class="grid-col">Column 2</div>
+  <div class="grid-col">Column 3</div>
+</div>
+<div class="flex-row">
+  <div class="flex-col">Column 1</div>
+  <div class="flex-col">Column 2</div>
+    <div class="flex-col">Column 2</div>
+      <div class="flex-col">Column 2</div>
+        <div class="flex-col">Column 2</div>
+          <div class="flex-col">Column 2</div>
+            <div class="flex-col">Column 2</div>
+              <div class="flex-col">Column 2</div>
+                <div class="flex-col">Column 2</div>
+                  <div class="flex-col">Column 2</div>
+</div>
+<p>Result: {{ divisionResult }}</p>

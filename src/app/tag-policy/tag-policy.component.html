@@ -1,0 +1,213 @@
+<div class="tagpolicy">
+    <div class="frame-container">
+        <div class="frame-1000004481">
+            <div class="frame-2147223677">
+                <div class="rs-table-data" style="width: -webkit-fill-available;">
+                    <h4 class="rs-table-title1 rs-txt-s8 rs-txt-secondary-clr" id="ac-table-title9">Tag Policy</h4>
+                    <div style="background-color: #EEEAF4B2; padding: 20px;">
+                        <header class="rs-table-banner rs-table-banner-top headerstyle">
+                            <div class="row">
+
+                                <div class="rs-form-items-group rs-form-items-group-collapse columns medium-6">
+                                    <div class="rs-form-item">
+                                        <input type="text" placeholder="Search keyword">
+                                        <label class="rs-form-label" for="ac-searchInput10">Search</label>
+                                    </div>
+                                    <div class="rs-form-btn">
+                                        <button type="submit" class="rs-btn " title="Search"><i
+                                                class="icon-Search"></i></button>
+                                    </div>
+                                </div>
+
+                                <div class="columns small-12 medium-2">
+                                    <div class="rs-form-item">
+                                        <select id="ac-selectbox1" name="ac-selectbox1" required>
+                                            <option value="Service">Service</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="columns small-12 medium-2">
+                                    <div class="rs-form-item">
+                                        <select required>
+                                            <option value="select">Zone</option>
+                                            <option value="Active"></option>
+                                            <option value="Inactive"></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="columns medium-2">
+                                    <div class="">
+                                        <a href="javascript:void(0)" class="rs-btn rs-btn-primary rs-btn-nl-m"> Add new
+                                            policy</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <table class="rs-table rs-table-zebra rs-table--responsive rs-table-has-banner-bottom"
+                            aria-labelledby="ac-table-title9">
+                            <thead>
+                                <tr>
+                                    <th scope="col" aria-sort="ascending"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <div class="rs-checkbox">
+                                            <input type="checkbox" name="check2" id="ac-check2">
+                                            <a role="button" href="javascript:void(0)"
+                                                class="rs-link-no-decoration rs-table-sort-link">
+                                                ID
+                                                <i class="rs-table-sort-icon"
+                                                    aria-label="Sorted by Name in ascending order"></i>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" aria-sort="ascending"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Policy Name
+                                            <i class="rs-table-sort-icon"
+                                                aria-label="Sorted by Name in ascending order"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Policy Label
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Status
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Audit Logging
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Groups
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Users
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none" class="rs-nowrap rs-table--responsive__cell-hide">
+                                        <span class="show-for-sr">Role</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let policy of dataArray">
+                                    <td data-label="Name:" class="rs-table--responsive__cell-collapse">
+                                        <div class="rs-checkbox"><input type="checkbox" name="check2"
+                                                id="ac-check2"><label for="ac-check2"></label>
+                                            <a>23</a>
+                                        </div>
+                                    </td>
+                                    <td data-label="Name:" class="rs-table--responsive__cell-collapse">
+                                        {{policy.policyname}}</td>
+                                    <td data-label="Email:" class="rs-table--responsive__cell-collapse">
+                                        {{policy.policylabel}}</td>
+                                    <td data-label="Role:" class="rs-table--responsive__cell-collapse"
+                                        style="color:lightgreen;">{{policy.auditlogging}}</td>
+                                    <td data-label="Role:" class="rs-table--responsive__cell-collapse"
+                                        style="color:lightgreen;">{{policy.status}}</td>
+                                    <td data-label="Role:" class="rs-table--responsive__cell-collapse">{{policy.groups}}
+                                    </td>
+                                    <td data-label="Role:" class="rs-table--responsive__cell-collapse">{{policy.users}}
+                                    </td>
+                                    <td
+                                        class="rs-table--responsive__cell-collapse text-right rs-nowrap rs-table-cell-compact">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <footer class="rs-table-banner rs-table-banner-bottom">
+                            <div class="rs-flex-row rs-justify-between-medium">
+                                <div class="rs-flex-columns small-12 medium-6 rs-order-m2">
+                                    <div class="rs-pagination  rs-table-banner-pagination rs-justify-between-small-only rs-justify-right-medium"
+                                        aria-label="Pagination">
+                                        <div class="rs-navigation ">
+                                            <div class="rs-navigation-arrow rs-navigation-arrow-next ">
+                                                <a class="rs-navigation-trigger" href="#">
+                                                    <i class="icon-Arrowbutton icon-lh icon-large"
+                                                        aria-label="Next page"></i>
+                                                </a>
+                                            </div>
+                                            <div class="rs-navigation-arrow rs-navigation-arrow-prev rs-disabled">
+                                                <a class="rs-navigation-trigger" href="javascript:void(0)"
+                                                    tabindex="-1">
+                                                    <i class="icon-Arrowbutton-left icon-lh icon-large"
+                                                        aria-label="Previous page"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="rs-pagination-counter">
+                                            <div class="rs-form-item">
+                                                <label class="show-for-sr" for="ac-selectBox10">Select a page</label>
+                                                <select id="ac-selectBox10" name="ac-selectBox10" class="rs-filled">
+                                                    <option value="1" selected="">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </div>
+                                            <span class="rs-pagination-counter-label">of 10 pages</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rs-flex-columns small-12 medium-6 rs-order-m1">
+                                    <div class="rs-pagination rs-justify-between-small-only rs-justify-left-medium "
+                                        aria-label="Pagination">
+                                        <div class="rs-pagination-counter">
+                                            <div class="">
+                                                <div class="rs-form-item">
+                                                    <label class="show-for-sr" for="ac-selectBox11">Select a number of
+                                                        items</label>
+                                                    <select id="ac-selectBox11" name="ac-selectBox11" class="rs-filled">
+                                                        <option value="10" selected="">10</option>
+                                                        <option value="20">2</option>
+                                                        <option value="30">3</option>
+                                                        <option value="40">4</option>
+                                                        <option value="50">5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <span class="rs-pagination-counter-label">Items per page</span>
+                                        </div>
+                                        <div class="rs-pagination-text">
+                                            <p>1-10 of 200 items</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

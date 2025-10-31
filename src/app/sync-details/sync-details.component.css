@@ -1,0 +1,31 @@
+.users {
+  background: #ffffff;
+  height: 1010px;
+  position: relative;
+  overflow: hidden;
+}
+
+.frame-2147223677 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.users2 {
+  color: var(--text-positive-body-text, #0a0a0a);
+  text-align: left;
+  font-family: var(
+    --default-res-desktop-h3-default-desk-font-family,
+    "Proximus-Bold",
+    sans-serif
+  );
+  font-size: var(--default-res-desktop-h3-default-desk-font-size, 28px);
+  line-height: var(--default-res-desktop-h3-default-desk-line-height, 36.4px);
+  font-weight: var(--default-res-desktop-h3-default-desk-font-weight, 700);
+  position: relative;
+  width: 100%;
+}

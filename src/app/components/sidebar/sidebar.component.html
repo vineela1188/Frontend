@@ -1,0 +1,60 @@
+<div class="new-nav">
+    <div class="top-section">
+        <div class="accordion-full">
+
+            <div *ngFor="let menu of menus; let i = index" [ngClass]="'accordion' + (i + 1) ">
+                <div [ngClass]="menu.classes" [class.active]="menu.active" (click)="setToggle(i)"
+                    (keydown)="setToggle(i, $event)" role="button" class="rs-accordion-title"
+                    [class.rs-expanded]="toggles[i]" [attr.aria-expanded]="toggles[i]"
+                    [attr.data-expanded]="!toggles[i]" [attr.tabindex]="i"
+                    [attr.aria-controls]="'ac-accordion-content-' + i">
+
+                    <div class="frame-2147223641">
+                        <div class="collaboration">
+                            <div class="frame7">
+                                <i [ngClass]="menu.iconClass" class="side"></i>
+                            </div>
+                        </div>
+                        <div [ngClass]="menu.menuClass">{{ menu.name }}</div>
+                        <i [class.icon-Arrow-down]="!toggles[i]" [class.icon-Collapse]="toggles[i]" aria-hidden="true"
+                            class="side"></i>
+                    </div>
+                </div>
+
+                <div *ngFor="let submenu of menu.subMenus; let ii=index"
+                    [ngClass]="'rs-accordion-content nav-sub-menu ' + submenu.class"
+                    [style.display]="toggles[i] ? 'block' : 'none'" id="ac-accordion-content-{{i}}"
+                    data-accordion-panel-content data-tabs>
+                    <a href="{{submenu.href}}" [ngClass]="'label ' + submenu.class ">{{ submenu.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line-573"></div>
+    <div class="frame-2147223657">
+        <div class="accordion3">
+            <div class="menu3">
+                <div class="frame-21472236423">
+                    <a href="#">
+                        <div class="icon-label">
+                            <i class="icon-Contact" aria-hidden="true"></i>
+                            <span class="support">Support</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion3">
+            <div class="menu3">
+                <div class="frame-21472236423">
+                    <a href="#">
+                        <div class="eservices">
+                            <i class="icon-Settings" aria-hidden="true"></i>
+                            <span class="support">Settings</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

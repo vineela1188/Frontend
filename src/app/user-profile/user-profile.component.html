@@ -1,0 +1,86 @@
+<!-- src/app/user-profile.component.html -->
+<div class="container">
+ 
+  <div class="frame-container">
+    
+
+    <div class="rs-flex-columns small-12 medium-12">
+   
+      <div class="rs-flex-columns small-12 medium-8">
+        <div class="rs-panel-flex">
+          <h4 class="rs-txt-s8 rs-txt-secondary-clr ">User Profile</h4>
+          <div class="rs-panel-flex-cell rs-bg-pt1 rs-padding2">
+
+            <div class="row rs-padding1-s">
+              <div class="small-12 medium-6 columns">
+                Username
+              </div>
+              <div class="small-12 medium-6 columns rs-font-pxB">
+                {{userProfile.username}}
+              </div>
+            </div>
+            <div class="row rs-padding1-s">
+              <div class="small-12 medium-6 columns">
+                Full Name
+              </div>
+              <div class="small-12 medium-6 columns rs-font-pxB">
+                {{ userProfile.fullName }}
+              </div>
+            </div>
+            <div class="row rs-padding1-s">
+              <div class="small-12 medium-6 columns ">
+                Email
+              </div>
+              <div class="small-12 medium-6 columns rs-font-pxB">
+                {{ userProfile.email }}
+              </div>
+            </div>
+            <div class="row rs-padding1-s">
+              <div class="small-12 medium-6 columns">
+                Role
+              </div>
+              <div class="small-12 medium-6 columns rs-font-pxB">
+                {{ userProfile.role }}
+              </div>
+            </div>
+            <div class="row rs-padding1-s">
+              <div class="small-12 medium-6 columns">
+                Group
+              </div>
+              <div class="small-12 medium-6 columns rs-font-pxB">
+                {{ userProfile.group }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  </div>
+    <div class="rs-flex-columns small-12 medium-12">
+      <div class="rs-flex-columns small-12 medium-8">
+        <div class="rs-panel-flex">
+          <h4 class="rs-txt-s8 rs-txt-secondary-clr ">Sync Details</h4>
+          <div class="rs-panel-flex-cell rs-bg-pt1 rs-padding2">
+            <div class="row rs-padding1-s">
+              <div class="small-12 medium-6 columns">
+                Name
+              </div>
+              <div class="small-12 medium-6 columns rs-font-pxB">
+                {{ syncDetails1.name }}
+              </div>
+            </div>
+            <div class="row rs-padding1-s">
+              <div class="small-12 medium-6 columns">
+                Value
+              </div>
+              <div class="small-12 medium-6 columns rs-font-pxB">
+                {{ syncDetails1.value }}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

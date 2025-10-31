@@ -1,0 +1,90 @@
+<div class="rs-login-page rs-header-transparent rs-header-transparent">
+    <div class="off-canvas-wrap">
+      <div class="inner-wrap">
+        <div class="rs-header2020-wrapper" data-elastic="index-off">		
+	</div>
+        <div class="rs-content-wrapper">
+          <main id="maincontent" role="main">
+            <div class="rs-fe3"></div>
+            <div class="rs-fe3"></div>
+            <section id="login" class="jsrs-fullheight">
+				<div class="rs-flex-row rs-justify-center">
+				  <div class="rs-flex-column">
+					<div class="rs-panel-flex rs-mh-m40">
+					  <div class="rs-flex-row rs-flex-collapse rs-maxh">
+						<div class="small-12 rs-flex-columns rs-bg-c2 rs-order-s2 rs-order-m1 medium-7" style="margin-left:260px;width:635px;height:395px;">
+						  <div class="boxLayout">
+        <!-- Sign in to your account -->
+       
+
+						
+							<div id="form-tab" data-tabs="" class="rs-sliding-tabs-minimal">
+							  
+							  <div id="login-form">
+								<div aria-labelledby="loginTab" id="loginTabsContent" data-tms-event="funnel-click-impression" data-tms-funnel-zone="login" data-tms-funnel-name="login" data-tms-funnel-step.name="login.landing" data-tms-funnel-state="start" class="hide rs-no-padding-bottom rs-no-margin-bottom" style="display: block;height:193px;width:555px;"  tabindex="0" data-tabs-content="" data-tabs-selected="true">
+                  <div id="kc-form">
+                      <div id="kc-form-wrapper">
+                        <div id="ebu-login-form" style="display: block;">
+                          <form id="kc-form-login" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+                              <input type="hidden" name="loginMethod" value="ebu">
+                              <div class="row rs-padding-bottom2 ">
+                        <div class="small-6 large-8 columns headingCss">Login to My account</div>
+                        <div class="small-6 large-3 columns needHelpTxt" style="padding-left:68px;">Need help
+                            <a href="#"><i class="icon-Target-Blank iconblur"></i></a></div>
+                        </div>
+                        <div class="rs-form-item ">
+                          <input type="text" name="username" [(ngModel)]="username"  placeholder="Username (e-mail address)"  required/> 
+                          <label class="fontSizeSmall">Username (e-mail address)</label>
+                        </div>
+
+                        <div class="rs-form-item rs-form-item-pwd rs-padding-bottom1 ">
+                            <input type="password" name="password" [(ngModel)]="password"  placeholder="password" required/>
+                            <label class="fontSizeSmall">Password</label>
+                            <span data-tooltip="" role="button" tabindex="0" id="password-eye" class="jsrs-togglePassword rs-see-pwd" onclick="togglepawd()" data-selector="tooltip-lt98v4xc0" aria-describedby="tooltip-lt98v4xc0" title="">
+                            </span>
+                        </div>
+                        <div class="rs-padding-bottom2 fontSizeSmall">
+                          <span><a tabindex="5">Forgot username or password?</a></span>
+                        </div>
+                        <div class="form-group login-pf-settings">
+                          <div id="kc-form-options ">
+                              <div class="rs-form-item">
+                                <div class="rs-checkbox">
+                                    <input tabindex="3" id="rememberMe" class="ng-valid" name="rememberMe" type="checkbox">
+                                    <label for="rememberMe" style="font-size: 14px;">Keep me logged in</label>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      <div class="row">
+                          <div id="kc-form-buttons columns medium-2">
+                              <input type="submit" class="rs-btn" id="id-hidden-input" name="credentialId" style="width:25%">
+                      </div>
+                    </div>
+                  <div *ngIf="errorMessage" class="errormsg">
+                    {{ errorMessage }}
+                  </div>
+           </form>
+         </div>
+       </div>
+       <!-- CWS Login Form -->
+        <div id="cws-login-form" style="display: none;">
+       </div>
+     </div>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+                </div>
+              </div>
+            </section>
+            <div class="rs-fe3"></div>
+            <div class="rs-fe3"></div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>

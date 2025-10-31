@@ -1,0 +1,110 @@
+.list {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.list-image {
+  width: 100px;
+  height: auto;
+}
+
+.rs-table-title1 {
+  /* margin-bottom: 2rem; */
+  /* border-bottom: 0.2rem solid var(--color-heading); */
+  font-weight: 700;
+  color: #0A0A0A;
+  text-align: left;
+
+  width: 240;
+  height: 37;
+  range: 0 deg;
+  opacity: 1;
+
+}
+
+p.custom-style {
+  color: rgba(0, 0, 0, 0.56);
+  font-family: Proximus;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+
+}
+
+.frame-2147223678 {
+  text-align: left;
+  width: 1179;
+  height: 71;
+  gap: 10px;
+  range: 0 deg;
+  opacity: 1;
+
+}
+
+.selectable {
+  color: #FFFFFF;
+  width: 245;
+  height: 45;
+  range: 0 deg;
+  opacity: 1;
+  border-radius: 5px;
+  gap: 10px;
+  border-width: 2px;
+
+}
+
+.headerstyle {
+ background-color: #EEEAF4B2;
+  margin-left: 2rem ; 
+  margin-right:2rem; 
+  padding: 20px;
+}
+
+/* .rs-table-banner {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: var(--border-radius);
+    background-color: #EEEAF4B2;
+
+} */
+
+
+
+.rs-sbox .rs-sbox-check-header {
+  display: flex;
+  width: auto;
+  flex: 1 1 auto;
+  align-items: flex-start;
+  height: 3.3rem;
+}
+
+.servicecheckbox {
+  font-family: Proximus;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0%;
+
+}
+.rs-sbox input + label {
+    background-color: #ffffff;
+    color: var(--color-tertiary7);
+    border: 0.2rem solid rgba(0, 0, 0, 0.08);
+    width: 25rem;
+}
+
+.footerstyle{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: #FFFFFF;
+;
+}
+
+.checkboxstyle {
+    margin-left: 9rem;
+}
+

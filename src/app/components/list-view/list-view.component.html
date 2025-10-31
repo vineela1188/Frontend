@@ -1,0 +1,361 @@
+<div class="container">
+    <!--  <app-header></app-header>
+    <app-sidebar></app-sidebar> -->
+    <div class="frame-container">
+        <div class="frame-2147223677">
+            <div class="rs-table-data" style="width: -webkit-fill-available;">
+                <h4 class="rs-table-title1" id="ac-table-title9" *ngIf="itemType === 'users'">Users</h4>
+                <!-- <div class="frame-2147223678"> -->
+                <h4 class="rs-table-title1" id="ac-table-title9" *ngIf="itemType === 'services'">Service
+                    Principals</h4>
+                <p class="custom-style" *ngIf="itemType === 'services'">Service principals are identities for use with
+                    automated tools, running jobs,
+                    and applications</p>
+                <!--   </div> -->
+                <div style="background-color: #EEEAF4B2; padding: 20px;">
+                    <header class="rs-table-banner rs-table-banner-top headerstyle">
+                        <div class="row">
+                            <p *ngIf="itemType === 'services'">Only active service principals are shown here. Enter a
+                                search
+                                term to view additional items
+                                from your Identity Provider</p>
+                            <div class="rs-form-items-group rs-form-items-group-collapse columns small-4"
+                                style="margin-left: -2rem;">
+                                <div class="rs-form-item">
+                                    <input type="text" placeholder="Search keyword">
+                                </div>
+                                <div class="rs-form-btn">
+                                    <button type="submit" class="rs-btn " title="Search" (click)="searchItems()"><i
+                                            class="icon-Search"></i></button>
+                                </div>
+                            </div>
+                            <div class="column small-2" [hidden]="itemType != 'users'">
+                                <div class="rs-sbox">
+
+                                </div>
+                            </div>
+                            <div class="columns small-12 medium-2">
+                                <div class="rs-form-item" *ngIf="itemType === 'users'">
+                                    <select id="ac-selectbox1" name="ac-selectbox1" required>
+                                        <option value=""></option>
+                                        <option value="thisweek">This week</option>
+                                        <option value="twoweek">Two weeks</option>
+                                        <option value="thismonth">This month</option>
+                                    </select>
+                                    <label class="rs-form-label" for="ac-selectbox1">This week</label>
+                                </div>
+                            </div>
+                            <div class="columns small-12 medium-2">
+                                <div class="rs-form-item" *ngIf="itemType === 'users'">
+                                    <select>
+                                        <option value="select">--select--</option>
+                                        <option value="Active">Active</option>
+                                        <option value="Inactive">Inactive</option>
+                                    </select>
+                                    <label class="rs-form-label" for="ac-selectbox1">Staus</label>
+                                </div>
+                            </div>
+                            <div class="column small-2" [hidden]="itemType != 'services'">
+                                <div class="rs-sbox">
+                                </div>
+                            </div>
+                            <div class="column small-4" [hidden]="itemType != 'services'">
+                                <div class="rs-sbox checkboxstyle">
+                                    <input id="sCheckbox1" type="checkbox">
+                                    <label for="sCheckbox1">
+                                        <span class="rs-sbox-maincontent">
+                                            <span class="rs-sbox-check-header">
+                                                <span class="rs-sbox-check"></span>
+                                                <span class="rs-sbox-check-content">
+                                                    <span class="rs-sbox-title servicecheckbox">Only Account
+                                                        Admins(11)</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="columns medium-2" style="margin-right:-3.3rem;">
+                                <div class="">
+                                    <a href="javascript:void(0)" class="rs-btn rs-btn-second rs-btn-nl-m"
+                                        style="background-color:#FFFFFF;;"><i class="icon-Download"></i>Export </a>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <table class="rs-table rs-table-zebra rs-table--responsive rs-table-has-banner-bottom"
+                        aria-labelledby="ac-table-title9" style="padding: 2rem;">
+                        <thead>
+                            <div *ngIf="itemType === 'users'">
+                                <tr>
+                                    <th scope="col" aria-sort="ascending"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <div class="rs-checkbox">
+                                            <input type="checkbox" name="check2" id="ac-check2">
+                                            <a role="button" 
+                                                class="rs-link-no-decoration rs-table-sort-link">
+                                                User Name
+                                                <i class="rs-table-sort-icon"
+                                                    aria-label="Sorted by Name in ascending order"></i>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" aria-sort="ascending"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Full Name
+                                            <i class="rs-table-sort-icon"
+                                                aria-label="Sorted by Name in ascending order"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Email Address
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Role
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Groups
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Status
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none" class="rs-nowrap rs-table--responsive__cell-hide">
+                                        <span class="show-for-sr">Actions</span>
+                                    </th>
+                                    <!-- <td 
+                                        class="rs-table--responsive__cell-collapse text-right rs-nowrap rs-table-cell-compact">
+                                        <button class="rs-link-action rs-link-action-edit"><span
+                                                class="rs-action-link-icon" title="Edit"><span class="show-for-sr">Edit
+                                                    Benjamin
+                                                    Richards</span></span></button>
+                                        <button class="rs-link-action rs-link-action-remove rs-margin-left1"><span
+                                                class="rs-action-link-icon" title="Remove"><span
+                                                    class="show-for-sr">Remove
+                                                    Benjamin Richards</span></span></button>
+                                    </td> -->
+                                </tr>
+                            </div>
+                            <div *ngIf="itemType === 'services'">
+                                <tr>
+                                    <th scope="col" aria-sort="ascending"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <div class="rs-checkbox">
+                                            <input type="checkbox" name="check2" id="ac-check2">
+                                            <a role="button" href="javascript:void(0)"
+                                                class="rs-link-no-decoration rs-table-sort-link">
+                                                Name
+                                                <i class="rs-table-sort-icon"
+                                                    aria-label="Sorted by Name in ascending order"></i>
+                                            </a>
+                                        </div>
+                                    </th>
+                                    <th scope="col" aria-sort="ascending"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Application ID
+                                            <i class="rs-table-sort-icon"
+                                                aria-label="Sorted by Name in ascending order"></i>
+                                        </a>
+                                    </th>
+
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Role
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Source
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <th scope="col" aria-sort="none"
+                                        class="rs-nowrap rs-table--responsive__cell-hide rs-table-sort">
+                                        <a role="button" href="javascript:void(0)"
+                                            class="rs-link-no-decoration rs-table-sort-link">
+                                            Status
+                                            <i class="rs-table-sort-icon" aria-label="Sort not in application"></i>
+                                        </a>
+                                    </th>
+                                    <!-- <th scope="col" aria-sort="none" class="rs-nowrap rs-table--responsive__cell-hide">
+                                        <span class="show-for-sr">Actions</span>
+                                    </th> -->
+                                </tr>
+                            </div>
+
+                        </thead>
+                        <tbody>
+                            <div *ngIf="itemType === 'users'">
+                                <tr *ngFor="let item of data">
+                                    
+                                    <td data-label="Name:" class="rs-table--responsive__cell-collapse">
+                  <div class="rs-checkbox"><input type="checkbox" name="check2" id="ac-check2"><label for="ac-check2"></label>
+                  <a (click)="navigateToUserProfile()">{{ item.userName }}</a></div>
+                </td>
+                                    <td data-label="Name:" class="rs-table--responsive__cell-collapse"
+                                        *ngIf="itemType === 'users'">{{ item.fullName }}</td>
+                                    <td data-label="Email:" class="rs-table--responsive__cell-collapse"
+                                        *ngIf="itemType === 'users'">{{ item.emailAddress }}</td>
+                                    <td data-label="Role:" class="rs-table--responsive__cell-collapse"
+                                        *ngIf="itemType === 'users'">{{ item.role }}</td>
+                                    <td data-label="Role:" class="rs-table--responsive__cell-collapse"
+                                        *ngIf="itemType === 'users'">{{ item.groups }}</td>
+                                    <td data-label="Role:" class="rs-table--responsive__cell-collapse">{{ item.status }}
+                                    </td>
+                                    <td class="rs-table--responsive__cell-collapse text-right rs-nowrap rs-table-cell-compact">
+                                <button class="rs-link-action rs-link-action-edit"><span class="rs-action-link-icon"
+                                        title="Edit"><span class="show-for-sr">Edit Benjamin
+                                            Richards</span></span></button>
+                                <button class="rs-link-action rs-link-action-remove rs-margin-left1"><span
+                                        class="rs-action-link-icon" title="Remove"><span class="show-for-sr">Remove
+                                            Benjamin Richards</span></span></button>
+                            </td>
+                                </tr>
+                                
+                            </div>
+
+
+
+
+                            <div *ngIf="itemType === 'services'">
+                                <tr *ngFor="let item of data">
+                                    <td data-label="Name:" class="rs-table--responsive__cell-collapse">
+                                        <div class="rs-checkbox"><input type="checkbox" name="check2"
+                                                id="ac-check2"><label for="ac-check2"
+                                                style="margin-left: -2rem;"></label>{{item.principalname}}</div>
+                                    </td>
+                                    <td data-label="applicationid:" class="rs-table--responsive__cell-collapse">{{
+                                        item.applicationId }}
+                                    </td>
+
+                                    <td data-label="Role:" class="rs-table--responsive__cell-collapse">{{ item.role }}
+                                    </td>
+
+                                    <td data-label="Role:" class="rs-table--responsive__cell-collapse">{{item.source}}
+                                    </td>
+
+                                    <td data-label="Role:" class="rs-table--responsive__cell-collapse">{{ item.status }}
+                                    </td>
+                                </tr>
+                            </div>
+
+
+                        </tbody>
+                    </table>
+                    <footer class="rs-table-banner rs-table-banner-bottom footerstyle">
+                        <div class="rs-flex-row rs-justify-between-medium">
+                            <div class="rs-flex-columns small-12 medium-6 rs-order-m2">
+                                <div class="rs-pagination  rs-table-banner-pagination rs-justify-between-small-only rs-justify-right-medium"
+                                    aria-label="Pagination">
+                                    <div class="rs-navigation ">
+                                        <div class="rs-navigation-arrow rs-navigation-arrow-next ">
+                                            <a class="rs-navigation-trigger" href="#">
+                                                <i class="icon-Arrowbutton icon-lh icon-large"
+                                                    aria-label="Next page"></i>
+                                            </a>
+                                        </div>
+                                        <div class="rs-navigation-arrow rs-navigation-arrow-prev rs-disabled">
+                                            <a class="rs-navigation-trigger" href="javascript:void(0)" tabindex="-1">
+                                                <i class="icon-Arrowbutton-left icon-lh icon-large"
+                                                    aria-label="Previous page"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="rs-pagination-counter">
+                                        <div class="rs-form-item">
+                                            <label class="show-for-sr" for="ac-selectBox10">Select a page</label>
+                                            <select id="ac-selectBox10" name="ac-selectBox10" class="rs-filled">
+                                                <option value="1" selected="">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </div>
+                                        <span class="rs-pagination-counter-label">of 10 pages</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rs-flex-columns small-12 medium-6 rs-order-m1">
+                                <div class="rs-pagination rs-justify-between-small-only rs-justify-left-medium "
+                                    aria-label="Pagination">
+                                    <div class="rs-pagination-counter">
+                                        <div class="">
+                                            <div class="rs-form-item">
+                                                <label class="show-for-sr" for="ac-selectBox11">Select a number of
+                                                    items</label>
+                                                <select id="ac-selectBox11" name="ac-selectBox11" class="rs-filled">
+                                                    <option value="10" selected="">10</option>
+                                                    <option value="20">2</option>
+                                                    <option value="30">3</option>
+                                                    <option value="40">4</option>
+                                                    <option value="50">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <span class="rs-pagination-counter-label">Items per page</span>
+                                    </div>
+                                    <!--  <div class="pagination">
+                                        <label>
+                                            Items per page:
+                                            <select (change)="onPageSizeChange($event.target.value)">
+                                                <option *ngFor="let size of pageSizes" [value]="size">{{ size }}
+                                                </option>
+                                            </select>
+                                        </label>
+
+                                        <button (click)="goToPage(currentPage - 1)"
+                                            [disabled]="currentPage === 1">Prev</button>
+                                        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+                                        <button (click)="goToPage(currentPage + 1)"
+                                            [disabled]="currentPage === totalPages">Next</button>
+                                    </div> -->
+
+                                    <div class="rs-pagination-text">
+                                        <p>1-10 of 200 items</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <app-sync-details></app-sync-details> -->
+</div>

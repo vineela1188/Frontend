@@ -1,0 +1,40 @@
+/*  :host { display:block; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#222; }
+    .pa-root { max-width: 980px; margin: 12px; }
+    .pa-top { display:flex; gap:18px; align-items:flex-start; }
+    .pa-categories, .pa-backends { background:#fff; border:1px solid #e6e6e6; padding:12px; border-radius:6px; flex:1; }
+    .pa-cat-header, .pa-back-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+    .btn-link { background:none; border:none; color:#0366d6; cursor:pointer; padding:6px; }
+    .btn-link[disabled] { color:#9aa6b2; cursor:default; }
+    .cat-list { list-style:none; padding:0; margin:0 0 10px 0; max-height:180px; overflow:auto; border-top:1px dashed #f0f0f0; }
+    .cat-item { padding:10px; border-bottom:1px solid #f6f6f6; cursor:pointer; outline:none; }
+    .cat-item.selected { background:#eef6ff; }
+    .cat-title { font-weight:600; }
+    .cat-desc { font-size:12px; color:#666; margin-top:4px; }
+    .chips { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .chip { background:#f0f4f8; padding:6px 10px; border-radius:14px; font-size:13px; }
+    .back-list { display:flex; gap:10px; flex-wrap:wrap; }
+    .back-item { display:flex; align-items:center; gap:6px; padding:6px; border-radius:6px; font-weight:500; }
+    .preview-image { margin-top:10px; }
+    .preview-image img { width:305px; height:189px; border-radius:4px; border:1px solid #ddd; display:block; }
+    .pa-bottom { display:flex; gap:14px; margin-top:10px; }
+    .pa-col { flex:1; min-width:150px; background:#fff; border:1px solid #e6e6e6; padding:12px; border-radius:6px; }
+    .label { display:block; font-weight:700; margin-bottom:8px; }
+    .empty { color:#6c757d; font-size:13px; padding:8px 0; }
+    .simple-list { margin:0; padding:0; list-style:none; }
+    .simple-list li { padding:4px 0; border-bottom:1px dashed #f1f1f1; }
+    .pa-actions { display:flex; gap:8px; justify-content:flex-end; margin-top:12px; }
+    .btn-primary { background:#0066cc; color:#fff; border:none; padding:8px 14px; border-radius:6px; cursor:pointer; }
+    .btn-primary[disabled] { opacity:0.5; cursor:not-allowed; }
+    .btn-secondary { background:#fff; border:1px solid #ccc; padding:8px 14px; border-radius:6px; cursor:pointer; }
+    .sr-only { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; } */
+
+
+    .flex-row {
+  display: flex;
+  gap: 1rem;
+}
+.flex-col {
+  flex: 1;
+  background: #e0e0e0;
+  padding: 1rem;
+}

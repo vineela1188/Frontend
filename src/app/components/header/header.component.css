@@ -1,0 +1,189 @@
+
+.doc-theme-change {
+    position: relative;
+}
+
+.top-header,
+.top-header * {
+  box-sizing: border-box;
+}
+.top-header {
+  background: var(
+    --component-and-panel-background-positive-white-background,
+    #ffffff
+  );
+  padding: 20px 24px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.header-left {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.logo-hold {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.logo {
+  flex-shrink: 0;
+  width: 160px;
+  height: 32px;
+  position: relative;
+}
+.proximus-logo-instance {
+  display: contents;
+}
+::ng-deep .proximus-logo-instance > * {
+  width: 32px !important;
+  height: 32px !important;
+  position: absolute !important;
+  left: calc(50% - 80px) !important;
+  top: 0px !important;
+  aspect-ratio: 1 !important;
+}
+.proximus-nxt {
+  width: 100.57px;
+  height: 18.56px;
+  position: absolute;
+  left: 47px;
+  top: 8.72px;
+  overflow: visible;
+  aspect-ratio: 100.57/18.56;
+}
+.top-header-tabs-instance {
+  display: contents;
+}
+::ng-deep .top-header-tabs-instance > * {
+  flex-shrink: 0 !important;
+}
+.header-right {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.last-response-time-09-10-2025-05-38-37-am {
+  text-align: left;
+  font-family: var(
+    --body-text-small-text-mob-font-family,
+    "Proximus-Regular",
+    sans-serif
+  );
+  font-size: var(--body-text-small-text-mob-font-size, 12px);
+  line-height: var(--body-text-small-text-mob-line-height, 18px);
+  font-weight: var(--body-text-small-text-mob-font-weight, 400);
+  position: relative;
+}
+.last-response-time-09-10-2025-05-38-37-am-span {
+  color: var(--canvas-colors-black-black7, #636363);
+}
+.last-response-time-09-10-2025-05-38-37-am-span2 {
+  color: var(--canvas-colors-black-black, #000000);
+}
+.profiles {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.user-account-instance {
+  display: contents;
+  /*  background: var(
+    --component-and-panel-background-positive-clickable-background-2,
+    rgba(92, 45, 145, 0.16) 
+  ); */
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  height: 44px;
+  position: relative;
+  overflow: hidden;
+}
+a, .rs-link-neg, .rs-neg .rs-link, .rs-table-neg .rs-table-sort-link, .rs-link{
+      color: rgba(0, 0, 0, 0.56);
+
+      text-decoration: none;
+}
+
+::ng-deep .user-account-instance > * {
+  flex-shrink: 0 !important;
+  width: unset !important;
+  box-shadow: unset !important;
+  backdrop-filter: unset !important;
+}
+.custom-select-wrapper {
+  position: relative;
+  width: 200px;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.custom-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: white;
+  z-index: 10;
+}
+
+.custom-option {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.custom-option:hover {
+  background-color: #f0f0f0;
+}
+
+.option-image {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.selected {
+  background-color: #e0e0e0;
+}

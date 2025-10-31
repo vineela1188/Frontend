@@ -1,0 +1,95 @@
+<div class="top-header">
+  <div class="header-container">
+    <div class="header-left">
+      <div class="logo-hold">
+        <div class="logo">
+          <img class="proximus-logo" src="assets/img/proximus-logo.svg" />
+          <img class="proximus-nxt" src="assets/img/proximus-nxt.svg" />
+        </div>
+      </div>
+      <div class="top-header-tabs">
+        <div class="header-menu-link">
+          <div class="header-menu-link-frame">
+            <div class="link"><a href="#">User Governance</a>
+            </div>
+          </div>
+        </div>
+        <div class="header-menu-link">
+          <div class="header-menu-link-frame">
+            <div class="link">
+              <a href="#">Resource Governance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="login-container">
+        Last Response Time:
+        <div class="timestamp">
+
+          {{ getFormattedDateTime() }}
+          <!--    {{ currentTime | customDateTime }} -->
+        </div>
+
+      </div>
+      <div class="profiles">
+        <div class="user-account-instance">
+          <img class="mobile-header-account" src="assets/img/UserAccount.png" />
+         <!--  <div class="frame-180">
+            <div class="marcus-orlando">
+              <select id="ac-selectbox1" name="ac-selectbox1" required>
+              <option value="">Dhivya</option>
+              <option value="">Profile</option>
+              <option value="">Logout</option>
+            </select>
+            </div>
+          </div> -->
+           <div class="rs-form-item">
+            <select id="ac-selectbox1" name="ac-selectbox1" required>
+              <option value="">Dhivya</option>
+              <option value="">Profile</option>
+              <option value="">Logout</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="custom-dropdown" (click)="toggleDropdown()" tabindex="0">
+  <span>{{ selectedItem || 'Select an item' }}</span>
+  <ul *ngIf="dropdownOpen" class="dropdown-list">
+    <li 
+      *ngFor="let item of items" 
+      (click)="selectItem(item)" 
+      [class.selected]="item === selectedItem"
+      tabindex="0"
+      (keydown.enter)="selectItem(item)">
+      {{ item }}
+    </li>
+  </ul> -->
+    </div>
+
+
+    <!-- <div class="custom-select-wrapper" (click)="toggleDropdown()">
+  <div class="selected-item">
+    <img [src]="selectedItem.image" alt="icon" />
+    <span>{{ selectedItem.label }}</span>
+    <span class="arrow">&#9662;</span>
+  </div>
+
+  <div class="dropdown" *ngIf="dropdownOpen">
+    <div
+      class="dropdown-item"
+      *ngFor="let item of items"
+      (click)="selectItem(item)"
+      [class.selected]="item === selectedItem"
+    >
+      <img [src]="item.image" alt="icon" />
+      <span>{{ item.label }}</span>
+    </div>
+  </div>
+</div>
+ -->
+
+
+  </div>
