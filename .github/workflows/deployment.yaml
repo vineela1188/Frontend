@@ -8,7 +8,7 @@ on:
      - "package-lock.json"
      - "angular.json"
      - "Dockerfile"
-     - ".github/workflows/deployment.yml"
+     - ".github/workflows/deployment.yaml"
  workflow_dispatch:
 env:
  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/frontend
