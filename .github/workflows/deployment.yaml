@@ -1,4 +1,4 @@
-name: Build & Push Frontend (Angula) to Docker Hub
+name: Build & Push Frontend (Angular) to Docker Hub
 on:
  push:
    branches: [ main ]
