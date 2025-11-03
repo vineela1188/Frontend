@@ -33,7 +33,7 @@ jobs:
        run: |
          npx ng version || npm i -D @angular/cli
          npx ng build --configuration production
-         # sanity check
+       
          ls -la "dist/${APP_NAME}"
      - name: Set up Docker Buildx
        uses: docker/setup-buildx-action@v3
