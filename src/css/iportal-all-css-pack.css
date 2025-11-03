@@ -36148,7 +36148,7 @@ dl,dt,dd {
     }
 }
 
-; ; .ng-pristine .ng-invalid-required {
+ .ng-pristine .ng-invalid-required {
     box-shadow: none;
 }
 
